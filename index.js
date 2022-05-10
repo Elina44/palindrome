@@ -1,13 +1,12 @@
-let userWord = " Lav- Al";
-let userWord1 = userWord.replace(/[&#,+()$~%'":*?<>!_\-{}|]/,"");
-let replaceWord = userWord1.split(' ').join('');
-let revWord = replaceWord.split('').reverse().join('');
-function palindrome() {
+function palindrome(userWord) {
+    let userWord1 = userWord.replace(/[&#,+()$~%'":*?<>!_\-{}|]/,"");
+    let replaceWord = userWord1.split(' ').join('');
+    let revWord = replaceWord.split('').reverse().join('');
     if(replaceWord.toLowerCase() == revWord.toLowerCase()) {
-        console.log("true");
+        return true;
     } else {
-        console.log("false");
+        return false;
     }
 }
 
-palindrome()
+console.log(palindrome("rotor!"));
